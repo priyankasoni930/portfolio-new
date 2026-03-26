@@ -27,13 +27,24 @@ export function Experience() {
           <li className="flex gap-3">
             <span className="text-blue-500 mt-1.5">•</span>
             <span>
-              Collaborated closely with designers and backend developers to
-              build seamless, and responsive interfaces
+              Developed the complete contract lifecycle module including
+              drafting, AI-powered redrafting, risk analysis, translation,
+              summarization, clause generation, and auto summary features.
             </span>
           </li>
           <li className="flex gap-3">
             <span className="text-blue-500 mt-1.5">•</span>
-            <span>Developed core user-facing features using React</span>
+            <span>
+              Built the frontend of litigation module that generates judgments,
+              summaries, facts, strategies, and drafts from case files.
+            </span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-blue-500 mt-1.5">•</span>
+            <span>
+              Implemented role-based team management flow for law firms and
+              lawyers, supporting role-based access and permissions.
+            </span>
           </li>
         </ul>
       </div>
