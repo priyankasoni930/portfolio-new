@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 export function Contact() {
   return (
     <section className="py-20 text-center">
@@ -17,22 +17,22 @@ export function Contact() {
           <span>Wanna chat? Just</span>
         </span>
         <a
-          href="mailto:your.email@example.com"
-          className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 underline underline-offset-4 transition-colors">
-          
+          href="mailto:soni.priyanka93016@gmail.com"
+          className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300  transition-colors"
+        >
           email me
         </a>
         <span>or</span>
         <a
-          href="https://x.com/yourusername"
+          href="https://x.com/Priyankasoni930"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 underline underline-offset-4 transition-colors">
-          
+          className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+        >
           dm me on X
         </a>
         <span>.</span>
       </p>
-    </section>);
-
+    </section>
+  );
 }

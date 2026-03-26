@@ -45,10 +45,22 @@ export function BottomDock() {
 
   const dockItems = [
     { icon: HomeIcon, label: "Home", href: "#" },
-    { icon: FileTextIcon, label: "Resume", href: "#" },
-    { icon: GithubIcon, label: "GitHub", href: "#" },
-    { icon: LinkedinIcon, label: "LinkedIn", href: "#" },
-    { icon: XIcon, label: "X", href: "#" },
+    {
+      icon: FileTextIcon,
+      label: "Resume",
+      href: "https://drive.google.com/file/d/1kpcW0x3Ee7uxQO-Nht6gQx7XFKpCDbr9/view?usp=sharing",
+    },
+    {
+      icon: GithubIcon,
+      label: "GitHub",
+      href: "https://github.com/priyankasoni930",
+    },
+    {
+      icon: LinkedinIcon,
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/priyanka-soni-6a9798293/",
+    },
+    { icon: XIcon, label: "X", href: "https://x.com/Priyankasoni930" },
   ];
 
   return (
@@ -83,6 +95,8 @@ export function BottomDock() {
             <a
               key={index}
               href={item.href}
+              target={item.label !== "Home" ? "_blank" : undefined}
+              rel={item.label !== "Home" ? "noopener noreferrer" : undefined}
               className="group relative flex items-center justify-center w-10 h-10 rounded-[16px] hover:bg-white/10 dark:hover:bg-black/10 transition-all duration-150 hover:scale-110 active:scale-95"
               aria-label={item.label}
             >
