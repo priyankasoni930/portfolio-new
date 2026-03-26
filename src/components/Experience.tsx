@@ -13,9 +13,7 @@ export function Experience() {
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">
               Frontend Developer
             </h3>
-            <p className="text-lg text-gray-700 dark:text-gray-300">
-              Astute Lex Servicado
-            </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300">LeXi AI</p>
           </div>
           <div className="text-sm text-gray-600 dark:text-gray-400 md:text-right">
             <p>April 2025 - Present</p>
