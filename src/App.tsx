@@ -1,11 +1,11 @@
-import React from 'react';
-import { FloatingIcons } from './components/FloatingIcons';
-import { Hero } from './components/Hero';
-import { Experience } from './components/Experience';
-import { Skills } from './components/Skills';
-import { Projects } from './components/Projects';
-import { Contact } from './components/Contact';
-import { BottomDock } from './components/BottomDock';
+import React from "react";
+import { FloatingIcons } from "./components/FloatingIcons";
+import { Hero } from "./components/Hero";
+import { Experience } from "./components/Experience";
+import { Skills } from "./components/Skills";
+import { Projects } from "./components/Projects";
+import { Contact } from "./components/Contact";
+import { BottomDock } from "./components/BottomDock";
 export function App() {
   return (
     <div className="min-h-screen bg-[#fafafa] dark:bg-[#0a0a0a] font-sans text-gray-900 dark:text-white relative overflow-hidden selection:bg-blue-200 selection:text-blue-900 dark:selection:bg-blue-800 dark:selection:text-blue-100">
@@ -21,13 +21,9 @@ export function App() {
         <Skills />
         <Projects />
         <Contact />
-
-        <footer className="py-12 text-center text-gray-500 dark:text-gray-400">
-          <p>© {new Date().getFullYear()} Priyanka. All rights reserved.</p>
-        </footer>
       </main>
 
       <BottomDock />
-    </div>);
-
+    </div>
+  );
 }
