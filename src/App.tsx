@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { FloatingIcons } from "./components/FloatingIcons";
 import { Hero } from "./components/Hero";
 import { Experience } from "./components/Experience";
@@ -8,22 +9,25 @@ import { Contact } from "./components/Contact";
 import { BottomDock } from "./components/BottomDock";
 export function App() {
   return (
-    <div className="min-h-screen bg-[#fafafa] dark:bg-[#0a0a0a] font-sans text-gray-900 dark:text-white relative overflow-hidden selection:bg-blue-200 selection:text-blue-900 dark:selection:bg-blue-800 dark:selection:text-blue-100">
-      {/* Background gradient blobs */}
-      <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-100/50 dark:bg-blue-500/5 blur-[100px] pointer-events-none z-[2]"></div>
-      <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-100/50 dark:bg-purple-500/5 blur-[100px] pointer-events-none z-[2]"></div>
+    <>
+      <Analytics />
+      <div className="min-h-screen bg-[#fafafa] dark:bg-[#0a0a0a] font-sans text-gray-900 dark:text-white relative overflow-hidden selection:bg-blue-200 selection:text-blue-900 dark:selection:bg-blue-800 dark:selection:text-blue-100">
+        {/* Background gradient blobs */}
+        <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-100/50 dark:bg-blue-500/5 blur-[100px] pointer-events-none z-[2]"></div>
+        <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-100/50 dark:bg-purple-500/5 blur-[100px] pointer-events-none z-[2]"></div>
 
-      <FloatingIcons />
+        <FloatingIcons />
 
-      <main className="max-w-4xl mx-auto px-8 md:px-16 relative z-10 pb-32">
-        <Hero />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
+        <main className="max-w-4xl mx-auto px-8 md:px-16 relative z-10 pb-32">
+          <Hero />
+          <Experience />
+          <Skills />
+          <Projects />
+          <Contact />
+        </main>
 
-      <BottomDock />
-    </div>
+        <BottomDock />
+      </div>
+    </>
   );
 }
