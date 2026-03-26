@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   HomeIcon,
   FileTextIcon,
@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { XIcon } from "lucide-react";
 import LiquidGlass from "liquid-glass-react";
+
 export function BottomDock() {
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== "undefined") {
@@ -20,6 +21,7 @@ export function BottomDock() {
     }
     return false;
   });
+
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add("dark");
@@ -29,57 +31,50 @@ export function BottomDock() {
       localStorage.setItem("theme", "light");
     }
   }, [isDark]);
+
   const toggleTheme = useCallback(() => {
     const switchFn = () => setIsDark((prev) => !prev);
-    // Use View Transition API for smooth synchronized transition
     if ((document as any).startViewTransition) {
-      const transition = (document as any).startViewTransition(() => {
+      (document as any).startViewTransition(() => {
         switchFn();
       });
     } else {
-      // Fallback for browsers without View Transition API
       switchFn();
     }
   }, []);
+
   const dockItems = [
-    {
-      icon: HomeIcon,
-      label: "Home",
-      href: "#",
-    },
-    {
-      icon: FileTextIcon,
-      label: "Resume",
-      href: "#",
-    },
-    {
-      icon: GithubIcon,
-      label: "GitHub",
-      href: "#",
-    },
-    {
-      icon: LinkedinIcon,
-      label: "LinkedIn",
-      href: "#",
-    },
-    {
-      icon: XIcon,
-      label: "X",
-      href: "#",
-    },
+    { icon: HomeIcon, label: "Home", href: "#" },
+    { icon: FileTextIcon, label: "Resume", href: "#" },
+    { icon: GithubIcon, label: "GitHub", href: "#" },
+    { icon: LinkedinIcon, label: "LinkedIn", href: "#" },
+    { icon: XIcon, label: "X", href: "#" },
   ];
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+    <div
+      style={{
+        position: "fixed",
+        bottom: "24px",
+        left: "50%",
+        zIndex: 50,
+      }}
+    >
       <LiquidGlass
-        displacementScale={70}
-        blurAmount={0.08}
-        saturation={150}
-        aberrationIntensity={2}
-        elasticity={0.2}
+        displacementScale={15}
+        blurAmount={0.02}
+        saturation={110}
+        aberrationIntensity={0.5}
+        elasticity={0.05}
         cornerRadius={28}
         padding="12px 16px"
         overLight={!isDark}
+        style={{
+          border: isDark
+            ? "1px solid rgba(255,255,255,0.18)"
+            : "1px solid rgba(0,0,0,0.12)",
+          borderRadius: "28px",
+        }}
       >
         <div className="flex items-center gap-3">
           {dockItems.map((item, index) => (
@@ -93,7 +88,6 @@ export function BottomDock() {
                 className="w-5 h-5 text-gray-800 dark:text-gray-100 transition-colors duration-200"
                 strokeWidth={1.5}
               />
-
               <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-gray-900/90 dark:bg-white/90 backdrop-blur-sm text-white dark:text-gray-900 text-[11px] font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-[100]">
                 {item.label}
               </div>
