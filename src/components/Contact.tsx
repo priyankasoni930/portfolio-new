@@ -8,7 +8,9 @@ export function Contact() {
       </div>
 
       {/* Main heading */}
-      <h2 className="text-5xl md:text-6xl font-bold mb-8">Get in Touch</h2>
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb mb-8">
+        Get in Touch
+      </h2>
 
       {/* Description with links */}
       <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2 flex-wrap">
