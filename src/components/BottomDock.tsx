@@ -55,16 +55,16 @@ export function BottomDock() {
     <div
       style={{
         position: "fixed",
-        bottom: "24px",
+        bottom: "-50px",
         left: "50%",
         zIndex: 50,
       }}
     >
       <LiquidGlass
-        displacementScale={15}
-        blurAmount={0.02}
-        saturation={110}
-        aberrationIntensity={0.5}
+        displacementScale={100}
+        blurAmount={0.5}
+        saturation={140}
+        aberrationIntensity={2}
         elasticity={0.05}
         cornerRadius={28}
         padding="12px 16px"
@@ -74,6 +74,7 @@ export function BottomDock() {
             ? "1px solid rgba(255,255,255,0.18)"
             : "1px solid rgba(0,0,0,0.12)",
           borderRadius: "28px",
+          boxShadow: "none",
         }}
       >
         <div className="flex items-center gap-3">
