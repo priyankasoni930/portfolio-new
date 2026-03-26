@@ -3,7 +3,7 @@ export function Contact() {
   return (
     <section className="py-20 text-center">
       {/* Contact badge */}
-      <div className="inline-block px-6 py-2 rounded-full bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-gray-200 dark:border-white/10 text-sm font-medium text-gray-700 dark:text-gray-300 mb-8">
+      <div className="inline-block px-4 py-1.5 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900  text-sm font-medium mb-8">
         Contact
       </div>
 

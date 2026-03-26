@@ -84,7 +84,7 @@ export function Projects() {
     <section className="relative z-10 py-20">
       <div className="text-center mb-16">
         <div className="inline-block px-4 py-1.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-bold mb-6">
-          Main Projects
+          Projects
         </div>
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
           Check out my latest work
