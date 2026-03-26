@@ -61,13 +61,13 @@ export function BottomDock() {
       }}
     >
       <LiquidGlass
-        displacementScale={100}
-        blurAmount={0.5}
-        saturation={140}
+        displacementScale={50}
+        blurAmount={0.1}
+        saturation={130}
         aberrationIntensity={2}
-        elasticity={0.05}
+        elasticity={0.35}
         cornerRadius={28}
-        padding="12px 16px"
+        padding="12px 8px"
         overLight={!isDark}
         style={{
           border: isDark
@@ -75,14 +75,15 @@ export function BottomDock() {
             : "1px solid rgba(0,0,0,0.12)",
           borderRadius: "28px",
           boxShadow: "none",
+          gap: "0px",
         }}
       >
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           {dockItems.map((item, index) => (
             <a
               key={index}
               href={item.href}
-              className="group relative flex items-center justify-center w-11 h-11 rounded-[18px] hover:bg-white/10 dark:hover:bg-black/10 transition-all duration-150 hover:scale-110 active:scale-95"
+              className="group relative flex items-center justify-center w-10 h-10 rounded-[16px] hover:bg-white/10 dark:hover:bg-black/10 transition-all duration-150 hover:scale-110 active:scale-95"
               aria-label={item.label}
             >
               <item.icon
@@ -99,7 +100,7 @@ export function BottomDock() {
 
           <button
             onClick={toggleTheme}
-            className="group relative flex items-center justify-center w-11 h-11 rounded-[18px] hover:bg-white/10 dark:hover:bg-black/10 transition-all duration-150 hover:scale-110 active:scale-95"
+            className="group relative flex items-center justify-center w-10 h-10 rounded-[16px] hover:bg-white/10 dark:hover:bg-black/10 transition-all duration-150 hover:scale-110 active:scale-95"
             aria-label="Toggle theme"
           >
             {isDark ? (
