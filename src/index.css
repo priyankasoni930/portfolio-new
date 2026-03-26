@@ -1,0 +1,71 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+@keyframes float-delayed {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(20px); }
+  100% { transform: translateY(0px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float-delayed 7s ease-in-out infinite;
+}
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+.wavy-underline {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #ef4444;
+  text-underline-offset: 8px;
+}
+.dark .wavy-underline {
+  text-decoration-color: #f87171;
+}
+/*
+  View Transition API - Theme slide from top
+  
+  The old snapshot (previous theme) slides downward and exits,
+  revealing the new theme underneath. Everything is perfectly
+  synchronized - text, backgrounds, cards all change together
+  as the old view slides away.
+*/
+
+/* The OLD state (screenshot of previous theme) slides down and out */
+::view-transition-old(root) {
+  animation: themeSlideOut 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  z-index: 999;
+}
+/* The NEW state (new theme) is already in place underneath */
+::view-transition-new(root) {
+  animation: none;
+  z-index: 1;
+}
+@keyframes themeSlideOut {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(100% 0 0 0);
+  }
+}
