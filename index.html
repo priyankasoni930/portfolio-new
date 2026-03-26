@@ -7,7 +7,8 @@
     <meta name="author" content="Priyanka Soni" />
     <link rel="icon" type="image/png" href="/portfolio.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Priyanka Soni</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script>
       // Prevent dark mode flash by applying theme before page renders
       (function () {
@@ -21,6 +22,19 @@
         }
       })();
     </script>
+    <style>
+      /* Prevent white flash and font loading shift */
+      html {
+        background-color: #fafafa;
+      }
+      html.dark {
+        background-color: #0a0a0a;
+      }
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
